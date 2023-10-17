@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:wght@400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+  /* outline: 1px solid white; */
+}
+
+:root {
+  --text-color-1: #20b2aa;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  background: black;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color:white;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: -1;
+}
+
+nav {
+  padding: 2vh 2vh;
+  height: 12vh;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  background:transparent;
+ 
+}
+
+header .logo {
+    padding-left: 5vh;
+    height: 10vh;
+}
+
+.navbar-list {
+  display: flex;
+  gap: 8vh;
+  list-style: none;
+  
+}
+
+.navbar-link:link,
+.navbar-link:visited {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2.2vh;
+  font-weight: 500;
+  color: #fff;
+  transition: all 0.1s;
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+  color: var(--text-color-1);
+}
+
+#xbtn {
+  display: none;
+  cursor: pointer;
+}
+
+#toggle {
+  display: none;
+  cursor: pointer;
+
+}
+
+.sidebarToggleButtons {
+  display: none;
+}
+
+.userLogin
+{
+  padding-right: 5vh;
+  background-color: #fff;
+  width: 5vh;
+  height: 5vh;
+  border:transparent;
+  border-radius: 50%; 
+  text-align: center;  
+}
+
+.fa-user {
+ 
+}
+
+#homeSection{
+   width: 100%;
+   height: 90vh;
+  
+}
+
+#homeSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/images/heroBg.jpg");
+  filter: blur(20px); 
+  z-index: -1;
+}
+
+.ourMenuHeading {
+  display: flex;
+  flex-direction: column;
+  gap:0.5vh;
+  justify-content: center;
+  align-items: center;
+  padding-top:5vh;
+  padding-bottom: 2vh;
+  color:white;
+}
+
+.underline {
+  width:10vh;
+  height:2px;
+  background-color:var(--text-color-1);
+}
+
+
+.filter{
+  display: flex;
+  gap:2vh;
+  justify-content: center;
+  align-items: center;
+  padding:2vh 2vh;
+}
+
+.filterButton {
+   font-size: 1.8vh;
+   font-weight: 500;
+   width:12vh;
+   height: 4vh;
+   background: transparent;
+   color:var(--text-color-1);
+   border: 1px solid var(--text-color-1);
+   border-radius: 1.2rem;
+}
+
+.filterButton:hover {
+  background-color: var(--text-color-1);
+  color:black;
+}
+
+.menu{
+  min-width: none;
+  display: grid;
+  grid-template-columns:42vmin 42vmin 42vmin;
+  gap:3vmin;
+  justify-content: center;
+  align-items: center;
+}
+
+.items{
+  overflow: hidden;
+  display: flex;
+  background-color:transparent;
+}
+
+.items img {
+  width:20vmin;
+  height: 20vmin;
+  border:2px solid var(--text-color-1);
+  border-radius: 1.2rem;
+}
+
+.itemInfo{
+  width: 20vmin;
+  height: 20vmin;
+  font-size: 2vh;
+  display: flex;
+  flex-direction: column;
+  color:white;
+  padding: 1vh 1vh;
+}
+
+.itemName{
+  text-transform: capitalize;
+}
+
+.price {
+  color:var(--text-color-1);
+}
+
+.itemDescription{
+  font-size: 1.5vh;
+  padding: 1vh 0.3vh;
+  font-style: italic;
+}
+
+
+@media  screen and (max-width : 768px ) {
+  .sidebarToggleButtons {
+    display: block;
+  }
+  #toggle {
+    display: block;
+    z-index: 999;
+  }
+  
+  .navbar {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    /* center it  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* to get the tranisition (to get the nave bar to the right) */
+    transform: translateX(100%); 
+    transition: all 0.5s linear;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; 
+  }
+
+  .navbar-list{
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  .active .navbar {
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  
+  }
+
+  .active #xbtn {
+    position: absolute;
+    display: block;
+  }
+
+  .active #toggle {
+    display: none;
+  }
+}

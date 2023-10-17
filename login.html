@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/ded2cd9958.js" crossorigin="anonymous"></script>
+    <title>LoginPage</title>
+</head>
+<body>
+     <header>
+        <h1>FOOD ORDERINIG WEBSITE</h1>
+     </header>
+     <main>
+        <div class="loginCard">
+            <div class="leftCard"></div>
+            <div class="rightCard">
+                <div class="tabs">
+                    <span class="loginText">Log in</span>
+                    <span class="signupText">Sign Up</span>
+                </div>
+                <div class="loginTab hideTab">
+                    <label for="email"><i class="fa-solid fa-user" style="color: rgba(0,0,0,0.5);"></i> Username: <br><input title="email" id="email" type="email" placeholder="Enter your username..."></label>
+                    <label for="loginPassword"><i class="fa-solid fa-key" style="color: rgba(0,0,0,0.5);"></i> Password: <br>
+                        <div class="passwordLabel">
+                        <input title="password" id="loginPassword" type="password" placeholder="Enter Password...">
+                        <span class="eye"><i class="fa-solid fa-eye" style="color: rgba(0,0,0,0.3);"></i></span>
+                        <span class="slashEye hide"><i class="fa-solid fa-eye-slash" style="color: rgba(0,0,0,0.3);"></i></span>
+                    </div> 
+                 </label>
+                 <button title="loginButton" class="loginButton" type="submit">Sign In</button>
+                </div>
+                <div class="signupTab">
+                        <label for="username"><i class="fa-solid fa-user" style="color: rgba(0,0,0,0.5);"></i> Username: <br><input title="username" id="username" type="text" placeholder="Enter your username..."></label>
+                        <label for="email"><i class="fa-solid fa-envelope" style="color: rgba(0,0,0,0.5);"></i> Email: <br><input title="email" id="email" type="email" placeholder="Enter your email..."></label>
+                        <label for="signupPassword"><i class="fa-solid fa-key" style="color: rgba(0,0,0,0.5);"></i> Password: <br>
+                            <div class="passwordLabel">
+                            <input title="password" id="signupPassword" type="password" placeholder="Enter Password...">
+                            <span class="eye"><i class="fa-solid fa-eye" style="color: rgba(0,0,0,0.3);"></i></span>
+                            <span class="slashEye hide"><i class="fa-solid fa-eye-slash" style="color: rgba(0,0,0,0.3);"></i></span>
+                        </div>
+                    </label>
+                    <button title="signUpButton" class="signupButton" type="submit">Create an Account</button>
+                </div>
+                <div class="or">
+                    <div class="underline"></div>
+                    <span>or Sign in with</span>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="socialLoginCard">
+                    <i class="fa-brands fa-google" style="color: #5f9ea0;"></i>
+                    <i class="fa-brands fa-facebook" style="color: #5f9ea0;"></i>
+                    <i class="fa-brands fa-twitter" style="color: #5f9ea0;"></i>    
+                </div>
+                
+               
+                
+               
+            </div>
+        </div>
+     </main>
+    <script src="login.js"></script>
+    <script type="module" src="auth.js"></script>
+</body>
+</html>

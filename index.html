@@ -25,18 +25,36 @@
         <i class="fa-solid fa-bars" id="toggle" style="color: #fff;"></i>
         <i class="fa-solid fa-x" id="xbtn" style="color: #fff;"></i>
       </div>
-      <div class="userLogin">
-        <i class="fa-solid fa-user" style="color: #20b2aa;"></i>
+      <div class="userFunctions">
+      <div class="cartButton">
+        <i title="Add to Cart" class="fa-solid fa-cart-shopping fa-xl" style="color: #fff;"></i>
       </div>
-      
+      <div class="userLogin">
+        <a title="Login" href="login.html"><i class="fa-solid fa-user fa-xl" style="color: #fff;"></i></a>
+      </div>
+    </div>
        </nav> 
-        
     </header>
+
     <main>
     <section id="homeSection">
-      skjvnsjklvnsjklvnslkjvn
-    </section>
-    <section id="#menuSection">
+      <div class="heroLeft">
+        <pre>
+          <span class="welcomeText"><h1>Welcome to<br>The Mad Chef</h1></span>
+          <span class="welcomeDescription">
+          "The Mad Chef" provides a warm and inviting
+          atmosphere to savor the joys of great food and
+          delightful company. Join us and let our madness
+          for flavor transport you to a world of culinary
+          delight.</span>
+        </pre>
+      </div>
+      <div class="heroRight">
+        <img id="heroImg" src="images/pizza.png" alt="pizza">
+      </div>
+      </section>
+
+    <section id="menuSection">
       <div class="ourMenuHeading">
         <h1>Our Menu</h1>
         <div class="underline"></div>
@@ -51,11 +69,12 @@
        <div class="menu">
           <div class="items card">
             <img title="itemImages" src="images/item-1.jpeg">
-            <div class="itemInfo">
+            <div class="itemInfo hoverItem">
                 <span class="itemName">buttermilk pancakes</span>
                 <span class="price">$15.99</span>
+                <span><button id="addToCartButton">Add to cart</button></span>
                 <div class="underline"></div>
-                <span class="itemDescription">Don't have a tried-and-true favorite yet? You're in luck! people can't get enough of these classic buttermilk pancakes. Reviewers say they're light, fluffy, moist, and full of rich flavor.</span>
+                <span class="itemDescription ">Don't have a tried-and-true favorite yet? You're in luck! people can't get enough of these classic buttermilk pancakes. Reviewers say they're light, fluffy, moist, and full of rich flavor.</span>
             </div>
           </div>
           <div class="items card">
@@ -132,6 +151,29 @@
           </div>
        </div>
       </section>
+
+    <section id="reviewsSection">
+      <h1 class="reviewHeading">Our Reviews</h1>
+      <div class="underline"></div>
+      <div class="review">
+          <span class="reviewerName">Suhail Khan</span>
+          <span class="reviewStars">3.5/5 <i class="fa-solid fa-star" style="color: #e8ec04;"></i></span>
+          <span class="reviewText"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, libero quo. A, quaerat ducimus inventore quasi fuga libero. Exercitationem officia illo molestiae, fugit soluta nostrum sunt iste id consequuntur aut!</span>
+      </div>
+      <div class="reviewButtons">
+        <button title="Previous" class="prevButton"></button>
+        <button title="Next" class="nextButton"></button>
+      </div>
+      </section>
+
+    <section id="aboutSection">
+          
+      </section>
+
+    <section id="contactSection">
+
+      </section>
+
     </main>
     <script src="app.js"></script>
 </body>
